@@ -1,5 +1,5 @@
 const Joi = require('joi');
-const { ROLES } = require('../constant/roles');
+const  ROLES  = require('../constant/roles');
 
 const validateUser = (userData) => {
   const schema = Joi.object({

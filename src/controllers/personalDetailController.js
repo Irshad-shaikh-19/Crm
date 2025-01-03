@@ -1,7 +1,7 @@
 // src/controllers/leadController.js
 
 const Lead = require('../models/personalDetailModel'); // Assuming you have a model directory for this
-const { validateLead } = require('../validation/personalDetailValidator'); // Assuming you have a Joi validation file
+const  validateLead  = require('../validation/personalDetailValidator'); // Assuming you have a Joi validation file
 
 // Create a new lead
 exports.createLead = async (req, res) => {

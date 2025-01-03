@@ -1,8 +1,8 @@
 const dotenv = require("dotenv");
 const jwt = require("jsonwebtoken");
 const User = require("../models/userModel"); // Adjust path if necessary
-const { validateUser } = require("../validation/uservalidator"); // Adjust path if necessary
-const { ROLES } = require("../constant/roles"); // Adjust path if necessary
+const  validateUser  = require("../validation/uservalidator"); // Adjust path if necessary
+const  ROLES  = require("../constant/roles"); // Adjust path if necessary
 
 dotenv.config();
 
@@ -93,6 +93,7 @@ const loginUser = async (req, res) => {
     });
   } catch (err) {
     // 500 Internal Server Error
+    console.log("Error:",err);
     res.status(500).json({
       status: 500,
       message: "An error occurred while logging in",

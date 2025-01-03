@@ -1,12 +1,12 @@
 // src/controllers/permissionController.js
 
 const Joi = require('joi');
-const { Permission } = require('../models/permissionModel');
+const  Permission  = require('../models/permissionModel');
 const BaseService = require('../services/BaseService');
 const BaseResponse = require('../utils/BaseResponse');
 const permissionSchema = require('../validation/PermissionValidation');
 const rolePermisionSchema = require('../validation/RolePermissionValidation');
-const { Role } = require('../models/roleModel');
+const  Role  = require('../models/roleModel');
 
 const permissionService = new BaseService(Permission);
 

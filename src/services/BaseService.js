@@ -1,4 +1,4 @@
-const { Types, Model } = require('mongoose');
+const { Types } = require('mongoose');
 
 class BaseService {
   constructor(model) {
@@ -25,9 +25,10 @@ class BaseService {
     return this.model.findByIdAndDelete(new Types.ObjectId(id));
   }
 
-  // New method to check if a record exists based on a query
   async exists(query) {
-    return this.model.exists(query).then((result) => result !== null);
+    // Alternative implementation to avoid `exists` issues
+    const result = await this.model.findOne(query);
+    return result !== null;
   }
 }
 

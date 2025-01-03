@@ -1,5 +1,5 @@
 const WebsiteDetails = require("../../models/websiteDetailModel");
-const { createWebsiteDetailsSchema, updateWebsiDetailsSchema } = require("../../validation/lead/websiteDetailValidation");
+const { createWebsiteDetailsSchema, updateWebsiteDetailsSchema } = require("../../validation/lead/websiteDetailValidation");
 
 const create = async (req, res) => {
   try {
@@ -28,7 +28,7 @@ const update = async (req, res) => {
     const { id } = req.params;
 
     // Validate request body
-    const { error, value } = updateWebsiDetailsSchema.validate(req.body);
+    const { error, value } = updateWebsiteDetailsSchema.validate(req.body);
     if (error) {
       res.status(400).json({ message: error.details[0].message });
       return;

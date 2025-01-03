@@ -1,5 +1,5 @@
 const Joi = require('joi');
-const { Creditors } = require('../models/lead/creditorModel'); // Adjust path if necessary
+const Creditors  = require('../models/lead/creditorModel'); // Adjust path if necessary
 const BaseService = require('../services/BaseService');
 const BaseResponse = require('../utils/BaseResponse');
 const roleSchema = require('../validation/roleValidator'); // Adjust path if necessary

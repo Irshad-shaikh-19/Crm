@@ -1,7 +1,7 @@
 // src/controllers/RoleController.js
 
 const Joi = require('joi');
-const { Role } = require('../models/roleModel');
+const  Role  = require('../models/roleModel');
 const BaseService = require('../services/BaseService');
 const BaseResponse = require('../utils/BaseResponse');
 const roleSchema = require('../validation/roleValidator');
